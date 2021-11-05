@@ -1,27 +1,23 @@
 
-
-function distanceFromHqInBlocks (blockNumber) {
-  if (blockNumber > 42) {
-    return blockNumber - 42;
+function distanceFromHqInBlocks(someValue) {
+  if (someValue > 42){
+    return someValue - 42
   } else {
-    return 42 - blockNumber;
+    return 42 - someValue
+  }
+}
+let distanceFromHqInFeet = block => distanceFromHqInBlocks(block) * 264;
+
+function distanceTravelledInFeet(begin, end) {
+  if (begin < end){
+  return (end - begin) *264;
+  } else {
+  return (begin - end) *264
   }
 }
 
-function distanceFromHqInFeet (blockNumber) {
-  return distanceFromHqInBlocks(blockNumber) * 264;
-}
-
-function distanceTravelledInFeet (start, end) {
-  if (start < end) {
-    return (end - start) * 264;
-  } else {
-    return (start - end) * 264;
-  }
-}
-
-function calculatesFarePrice (start, end) {
-  const distance = distanceTravelledInFeet(start, end);
+function calculatesFarePrice (one, two) {
+  const distance = distanceTravelledInFeet(one, two);
 
   if (distance <= 400) {
     return 0;
@@ -33,3 +29,88 @@ function calculatesFarePrice (start, end) {
     return 'cannot travel that far';
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function distanceFromHqInBlocks (blockNumber) {
+//   if (blockNumber > 42) {
+//     return blockNumber - 42;
+//   } else {
+//     return 42 - blockNumber;
+//   }
+// }
+
+// function distanceFromHqInFeet (blockNumber) {
+//   return distanceFromHqInBlocks(blockNumber) * 264;
+// }
+
+// function distanceTravelledInFeet (start, end) {
+//   if (start < end) {
+//     return (end - start) * 264;
+//   } else {
+//     return (start - end) * 264;
+//   }
+// }
+
+// function calculatesFarePrice (start, end) {
+//   const distance = distanceTravelledInFeet(start, end);
+
+//   if (distance <= 400) {
+//     return 0;
+//   } else if (distance > 400 && distance <= 2000) {
+//     return .02 * (distance - 400);
+//   } else if (distance > 2000 && distance < 2500) {
+//     return 25;
+//   } else {
+//     return 'cannot travel that far';
+//   }
+// }
